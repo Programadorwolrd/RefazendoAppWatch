@@ -1,4 +1,5 @@
 const imagemVisualizacao = document.getElementById('imagem-visualizacao');
+const TituloProduto = document.getElementById('titulo-produto')
 // acima ele pega as informações do id que foi mencionado acima^
 
 const verdeCipreste = {
@@ -35,6 +36,7 @@ const opcoesCores =[verdeCipreste,azulInverno ,meiaNoite,estelar,rosaClaro]
 const opcoesTamanho =['41 mm', '45mm']
 
 let imagemSelecionada=1; 
+let tamanhoSelecionado=1; 
 
 
 // abaixo a função de troca de imagens 
@@ -48,5 +50,15 @@ function trocarImagem(){
 }
 
 
-function 
+function trocarTamanho(){
+   //mudar o tamanho da imagem
+   //mudar titulo do produto  
+   // lembrando que pode repetir variavel pq ela não é global 
+   const idOpcaoSelecionada =document.querySelector('[name="opcao-tamanho"]:checked').id;
+   tamanhoSelecionado= idOpcaoSelecionada.charAt(0);
+   TituloProduto.innerText = "Pulseira loop esportiva azul-inverno para caixa de  " + opcoesTamanho[tamanhoSelecionado];
+   //iner text parecido com o inner html mas no caso só vai alterar o texto
+
+
+}
 
