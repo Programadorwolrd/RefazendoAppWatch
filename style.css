@@ -113,6 +113,7 @@ main {
           mix-blend-mode: color;
         }
       }
+      /* aqui eu fiz a cor  do input ficar com uma borda azul qunado cheked */
       & input[type='radio']:checked + label {
         border-radius: 50%;
         border: 0.125rem solid #0066cc;
