@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hashtag Watch</title>
     <link rel="stylesheet" href="./style.css" />
+    <!-- js sempre fica no final pra o html ler depois  ou usa o defer -->
+  <script src="script.js" defer></script>
   </head>
   <body>
     <nav>
@@ -66,6 +68,7 @@
           <div id="opcoes">
             <h2 id="nome-cor-selecionada">Cor - Azul-inverno</h2>
             <ul id="selecao-cores">
+              <!-- a extrutura utilizada aq, foi um input e dentro dele existe uma img todos com um id diferente -->
               <li><input type="radio" name="opcao-cor" id="0-cor"><label for="0-cor"><img src="./imagens/opcoes-cores/verde-cipreste.jpeg" alt="" srcset=""></label></li>
               <li><input type="radio" name="opcao-cor" id="1-cor" checked><label for="1-cor"><img src="./imagens/opcoes-cores/azul-inverno.jpeg" alt="" srcset=""></label></li>
               <li><input type="radio" name="opcao-cor" id="2-cor"><label for="2-cor"><img src="./imagens/opcoes-cores/meia-noite.jpeg" alt="" srcset=""></label></li>
@@ -137,4 +140,5 @@
       <section id="outros"></section>
     </main>
   </body>
+  
 </html>
