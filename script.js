@@ -47,7 +47,7 @@ function trocarImagem(){
     //charAt serve pra ele pegar o priemiro caracter =(0)  
     imagemSelecionada = idOpcaoSelecionada.charAt(0);
     imagemVisualizacao.src = './imagens/opcoes-cores/imagens-azul-inverno/imagem-'+ imagemSelecionada +'.jpeg';
-}
+};
 
 
 function trocarTamanho(){
@@ -58,7 +58,11 @@ function trocarTamanho(){
    tamanhoSelecionado= idOpcaoSelecionada.charAt(0);
    TituloProduto.innerText = "Pulseira loop esportiva azul-inverno para caixa de  " + opcoesTamanho[tamanhoSelecionado];
    //iner text parecido com o inner html mas no caso só vai alterar o texto
-
-
-}
+    //abaixo eu manipulo o css e joga os estilos la do css chamado caixa pequena na imagem de vizualização
+    if (opcoesTamanho[tamanhoSelecionado] === '41 mm')
+    imagemVisualizacao.classList.add('caixa-pequena');
+    else{
+    imagemVisualizacao.classList.remove('caixa-pequena');
+    }
+};
 
