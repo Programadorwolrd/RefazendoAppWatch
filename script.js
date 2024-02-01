@@ -1,5 +1,9 @@
 const imagemVisualizacao = document.getElementById('imagem-visualizacao');
-const TituloProduto = document.getElementById('titulo-produto')
+const TituloProduto = document.getElementById('titulo-produto');
+const nomeCor = document.getElementById('nome-cor-selecionada');
+const miniaturaImagem0 = document.getElementById('0-imagem-miniatura');
+const miniaturaImagem1 = document.getElementById('1-imagem-miniatura');
+const miniaturaImagem2 = document.getElementById('2-imagem-miniatura');
 // acima ele pega as informações do id que foi mencionado acima^
 
 const verdeCipreste = {
@@ -9,7 +13,7 @@ const verdeCipreste = {
 
 const azulInverno = {
     nome:'Azul-inverno',
-    pasta: 'imagens-azul-inerno'
+    pasta:'imagens-azul-inerno'
 };
 
 const meiaNoite = {
@@ -57,7 +61,7 @@ function trocarTamanho(){
    // lembrando que pode repetir variavel pq ela não é global 
    const idOpcaoSelecionada =document.querySelector('[name="opcao-tamanho"]:checked').id;
    tamanhoSelecionado= idOpcaoSelecionada.charAt(0);
-   TituloProduto.innerText = "Pulseira loop esportiva " +  + " para caixa de  " + opcoesTamanho[tamanhoSelecionado];
+   TituloProduto.innerText = "Pulseira loop esportiva " + opcoesCores[corSelecioanda].nome + " para caixa de  " + opcoesTamanho[tamanhoSelecionado];
    //iner text parecido com o inner html mas no caso só vai alterar o texto
     //abaixo eu manipulo o css e joga os estilos la do css chamado caixa pequena na imagem de vizualização
     if (opcoesTamanho[tamanhoSelecionado] === '41 mm')
@@ -70,14 +74,18 @@ function trocarTamanho(){
 
 function trocarCor(){
 
-    const idOpcaoSelecionada=document.querySelector('["name=opcao-cor"]:checked').id
+    const idOpcaoSelecionada=document.querySelector('[name="opcao-cor"]:checked').id
     corSelecioanda= idOpcaoSelecionada.charAt(0);
     // trocar titulo da pagina aqui preenche o texto
     TituloProduto.innerText = "Pulseira loop esportiva " + opcoesCores[corSelecioanda].nome + " para caixa de  " + opcoesTamanho[tamanhoSelecionado];
     //trocar nome da cor
-   
+   nomeCor.innerText =' Cor - ' +  opcoesCores[corSelecioanda].nome;
     //trocar as minuaturas
-
+  miniaturaImagem0.src ='./imagens/opcoes-cores/' + opcoesCores[corSelecioanda].pasta +'/imagem-0.jpeg';
+  miniaturaImagem1.src ='./imagens/opcoes-cores/' + opcoesCores[corSelecioanda].pasta +'/imagem-1.jpeg';
+  miniaturaImagem2.src ='./imagens/opcoes-cores/' + opcoesCores[corSelecioanda].pasta +'/imagem-2.jpeg';
     //trocar imagem exibida
+    imagemVisualizacao.src = './imagens/opcoes-cores/' + opcoesCores[corSelecioanda].pasta + '/imagem-' +imagemSelecionada + '.jpeg'
+
 } 
 
