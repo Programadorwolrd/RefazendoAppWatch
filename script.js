@@ -37,6 +37,7 @@ const opcoesTamanho =['41 mm', '45mm']
 
 let imagemSelecionada=1; 
 let tamanhoSelecionado=1; 
+let corSelecioanda=1;
 
 
 // abaixo a função de troca de imagens 
@@ -56,7 +57,7 @@ function trocarTamanho(){
    // lembrando que pode repetir variavel pq ela não é global 
    const idOpcaoSelecionada =document.querySelector('[name="opcao-tamanho"]:checked').id;
    tamanhoSelecionado= idOpcaoSelecionada.charAt(0);
-   TituloProduto.innerText = "Pulseira loop esportiva azul-inverno para caixa de  " + opcoesTamanho[tamanhoSelecionado];
+   TituloProduto.innerText = "Pulseira loop esportiva " +  + " para caixa de  " + opcoesTamanho[tamanhoSelecionado];
    //iner text parecido com o inner html mas no caso só vai alterar o texto
     //abaixo eu manipulo o css e joga os estilos la do css chamado caixa pequena na imagem de vizualização
     if (opcoesTamanho[tamanhoSelecionado] === '41 mm')
@@ -65,4 +66,18 @@ function trocarTamanho(){
     imagemVisualizacao.classList.remove('caixa-pequena');
     }
 };
+
+
+function trocarCor(){
+
+    const idOpcaoSelecionada=document.querySelector('["name=opcao-cor"]:checked').id
+    corSelecioanda= idOpcaoSelecionada.charAt(0);
+    // trocar titulo da pagina aqui preenche o texto
+    TituloProduto.innerText = "Pulseira loop esportiva " + opcoesCores[corSelecioanda].nome + " para caixa de  " + opcoesTamanho[tamanhoSelecionado];
+    //trocar nome da cor
+   
+    //trocar as minuaturas
+
+    //trocar imagem exibida
+} 
 
